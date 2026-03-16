@@ -1,4 +1,4 @@
-Model.js code"// SoilSense Model Data - Malawi Version
+// SoilSense Model Data - Malawi Version
 const MODEL = {
     "feature_names": ["PH", "OC", "Mg", "N", "P", "K", "Zn", "Fe", "Cu", "Mn", "Sand", "Silt", "Clay", "CaCO3", "CEC", "Moisture_Content"],
     "classes": ["High", "Low", "Medium"],
