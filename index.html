@@ -18,13 +18,13 @@ box-sizing:border-box;
 font-family:'Inter',sans-serif;
 }
 
-/* LOGIN PAGE - WHITE BACKGROUND */
+/* LOGIN PAGE */
 #loginPage{
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:#ffffff;  /* Changed from green gradient to white */
+background:#ffffff;
 position:fixed;
 top:0;
 left:0;
@@ -41,11 +41,6 @@ border-radius:10px;
 box-shadow:0 15px 35px rgba(0,0,0,0.1);
 text-align:center;
 border:1px solid #e0e0e0;
-}
-
-.login-logo{
-font-size:40px;
-margin-bottom:10px;
 }
 
 .login-title{
@@ -80,11 +75,6 @@ border-radius:6px;
 background:#ffffff;
 }
 
-.form-group input:focus{
-outline:none;
-border-color:#1e3c2c;
-}
-
 .password-wrapper{
 display:flex;
 }
@@ -96,7 +86,6 @@ padding:0 12px;
 margin-left:6px;
 border-radius:6px;
 cursor:pointer;
-color:#666;
 }
 
 .login-btn{
@@ -111,22 +100,7 @@ cursor:pointer;
 margin-top:10px;
 }
 
-.login-btn:hover{
-background:#2a4a35;
-}
-
-.error-message{
-margin-top:10px;
-color:#c62828;
-font-size:13px;
-display:none;
-}
-
-.error-message.show{
-display:block;
-}
-
-/* MAIN APP - WHITE BACKGROUND */
+/* MAIN */
 #mainApp{
 display:none;
 background:#ffffff;
@@ -146,40 +120,8 @@ justify-content:space-between;
 align-items:center;
 }
 
-.logo-area{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo-icon{
-font-size:22px;
-}
-
-.logo-area h1{
-font-size:20px;
-font-weight:600;
-color:#333;
-}
-
-.logout-btn{
-background:#f5f5f5;
-border:1px solid #ddd;
-padding:8px 14px;
-border-radius:6px;
-color:#333;
-cursor:pointer;
-}
-
-.logout-btn:hover{
-background:#e0e0e0;
-}
-
-/* LAYOUT - WHITE BACKGROUND */
 .main-container{
 padding:30px;
-background:#ffffff;
-min-height:100vh;
 }
 
 .two-column-layout{
@@ -188,41 +130,11 @@ grid-template-columns:420px 1fr;
 gap:25px;
 }
 
-/* INPUT CARD */
 .input-card{
 background:#ffffff;
 border:1px solid #e0e0e0;
 border-radius:12px;
 padding:25px;
-box-shadow:0 2px 8px rgba(0,0,0,0.05);
-}
-
-.input-card h2{
-font-size:20px;
-font-weight:600;
-color:#333;
-margin-bottom:4px;
-}
-
-.input-subtitle{
-font-size:13px;
-color:#777;
-margin-bottom:18px;
-}
-
-.model-select{
-width:100%;
-padding:10px;
-border:1px solid #e0e0e0;
-border-radius:6px;
-margin-bottom:20px;
-background:#ffffff;
-color:#333;
-}
-
-.model-select:focus{
-outline:none;
-border-color:#1e3c2c;
 }
 
 .section-title{
@@ -231,7 +143,6 @@ font-size:12px;
 font-weight:600;
 color:#666;
 text-transform:uppercase;
-letter-spacing:0.5px;
 border-bottom:1px solid #e0e0e0;
 padding-bottom:5px;
 }
@@ -247,21 +158,23 @@ font-size:12px;
 color:#666;
 display:block;
 margin-bottom:4px;
-font-weight:500;
 }
 
 .input-field input{
 width:100%;
-padding:8px 10px;
-background:#ffffff;
+padding:8px;
 border:1px solid #e0e0e0;
 border-radius:6px;
-color:#333;
 }
 
-.input-field input:focus{
-outline:none;
-border-color:#1e3c2c;
+.add-btn{
+margin-top:10px;
+padding:8px;
+background:#f5f5f5;
+border:1px solid #e0e0e0;
+border-radius:6px;
+cursor:pointer;
+font-size:12px;
 }
 
 .analyze-btn{
@@ -274,781 +187,194 @@ border-radius:8px;
 font-weight:600;
 color:white;
 cursor:pointer;
-font-size:15px;
 }
 
-.analyze-btn:hover{
-background:#2a4a35;
-}
-
-.sample-buttons{
-display:flex;
-gap:10px;
-margin-top:15px;
-}
-
-.sample-btn{
-flex:1;
-padding:8px;
-background:#f5f5f5;
-border:1px solid #e0e0e0;
-border-radius:6px;
-color:#666;
-cursor:pointer;
-font-size:12px;
-}
-
-.sample-btn:hover{
-background:#e0e0e0;
-border-color:#1e3c2c;
-color:#1e3c2c;
-}
-
-/* RESULTS CARD */
 .results-card{
 background:#ffffff;
 border:1px solid #e0e0e0;
 border-radius:12px;
 padding:25px;
-min-height:500px;
-box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
-.empty-state{
-text-align:center;
-color:#999;
-padding-top:80px;
-}
-
-.empty-icon{
-font-size:48px;
-margin-bottom:10px;
-}
-
-/* RESULTS STYLES */
-.fertility-badge{
-display:inline-block;
-padding:6px 14px;
-border-radius:30px;
-font-weight:600;
-margin-bottom:15px;
-font-size:14px;
-}
-
-.badge-high{
-background:#e8f5e9;
-color:#2e7d32;
-border:1px solid #a5d6a7;
-}
-
-.badge-medium{
-background:#fff3e0;
-color:#ef6c00;
-border:1px solid #ffb74d;
-}
-
-.badge-low{
-background:#ffebee;
-color:#c62828;
-border:1px solid #ef9a9a;
-}
-
-.confidence-display{
-margin-bottom:20px;
-}
-
-.confidence-label{
-font-size:12px;
-color:#666;
-margin-bottom:4px;
-}
-
-.confidence-value{
-font-size:28px;
-font-weight:700;
-color:#1e3c2c;
-}
-
-.result-desc{
-color:#555;
-line-height:1.6;
-margin-bottom:25px;
-font-size:14px;
-}
-
-.indicators-section h3{
-font-size:14px;
-color:#333;
-margin-bottom:15px;
-padding-bottom:5px;
-border-bottom:1px solid #e0e0e0;
-}
-
-.indicator-item{
-display:flex;
-align-items:center;
-margin-bottom:12px;
-gap:10px;
-}
-
-.indicator-name{
-width:100px;
-font-size:12px;
-font-weight:600;
-color:#666;
-}
-
-.indicator-bar{
-flex:1;
-height:6px;
-background:#f0f0f0;
-border-radius:3px;
-overflow:hidden;
-}
-
-.indicator-fill{
-height:100%;
-border-radius:3px;
-}
-
-.indicator-value{
-width:75px;
-font-size:11px;
-color:#333;
-text-align:right;
-}
-
-.indicator-unit{
-color:#999;
-font-size:10px;
-margin-left:2px;
-}
-
-/* TABS */
-.tabs{
-display:flex;
-gap:10px;
-margin-bottom:20px;
-}
-
-.tab-btn{
-padding:8px 20px;
-border:none;
-border-radius:6px;
-font-weight:600;
-cursor:pointer;
-transition:all 0.3s;
-}
-
-.tab-btn.active{
-background:#1e3c2c;
-color:white;
-}
-
-.tab-btn:not(.active){
-background:#f5f5f5;
-color:#666;
-border:1px solid #e0e0e0;
-}
-
-.tab-btn:not(.active):hover{
-background:#e0e0e0;
-}
-
-.tab-content{
-display:none;
-}
-
-.tab-content.active{
-display:block;
-}
-
-/* BULK UPLOAD */
-.bulk-container{
-background:#ffffff;
-border:1px solid #e0e0e0;
-border-radius:12px;
-padding:25px;
-}
-
-.upload-area{
-border:2px dashed #e0e0e0;
-border-radius:8px;
-padding:40px;
-text-align:center;
-cursor:pointer;
-margin-bottom:20px;
-}
-
-.upload-area:hover{
-border-color:#1e3c2c;
-background:#f9f9f9;
-}
-
-.upload-icon{
-font-size:40px;
-margin-bottom:10px;
-}
-
-.upload-hint{
-font-size:11px;
-color:#999;
-}
-
-/* HISTORY CARD */
-.history-card{
-background:#ffffff;
-border:1px solid #e0e0e0;
-border-radius:12px;
-padding:25px;
-}
-
-.history-card h3{
-font-size:16px;
-color:#333;
-margin-bottom:20px;
-padding-bottom:8px;
-border-bottom:1px solid #e0e0e0;
-}
-
-.history-item{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:12px;
-background:#f9f9f9;
-border:1px solid #e0e0e0;
-border-radius:6px;
-margin-bottom:8px;
-}
-
-.history-fert{
-padding:3px 8px;
-border-radius:4px;
-font-size:11px;
-font-weight:600;
-}
-
-.history-time{
-color:#999;
-font-size:11px;
-}
-
-/* RESPONSIVE */
-@media (max-width:1024px){
-.two-column-layout{
-grid-template-columns:1fr;
-}
-}
-
-@media (max-width:768px){
-.input-grid{
-grid-template-columns:1fr;
-}
-.sample-buttons{
-grid-template-columns:1fr;
-}
-.tabs{
-flex-direction:column;
-}
-.header-content{
-flex-direction:column;
-gap:12px;
-}
-}
 </style>
 </head>
 
 <body>
 
-<!-- LOGIN PAGE - WHITE BACKGROUND -->
+<!-- LOGIN PAGE -->
 <div id="loginPage">
 <div class="login-box">
-<div class="login-logo"></div>
 <h1 class="login-title">Government Fertilizer Decision System</h1>
-<p class="login-subtitle">Soil Fertility Detector </p>
+<p class="login-subtitle">Soil Fertility Detector</p>
 
 <form id="loginForm">
 <div class="form-group">
 <label>Username</label>
-<input type="text" id="username" placeholder="Enter username" required>
+<input type="text" id="username" required>
 </div>
 
 <div class="form-group">
 <label>Password</label>
 <div class="password-wrapper">
-<input type="password" id="password" placeholder="Enter password" required>
-<button type="button" class="toggle-password" id="toggleBtn">👁️</button>
+<input type="password" id="password" required>
+<button type="button" class="toggle-password" onclick="togglePassword()">👁️</button>
 </div>
 </div>
 
-<button type="submit" class="login-btn">Login</button>
-<div class="error-message" id="loginError">Invalid username or password</div>
+<button class="login-btn">Login</button>
 </form>
 </div>
 </div>
 
-<!-- MAIN APPLICATION - WHITE BACKGROUND -->
+<!-- MAIN APP -->
 <div id="mainApp">
+
 <div class="app-header">
 <div class="header-content">
-<div class="logo-area">
-<span class="logo-icon"></span>
-<h1>SoilSense Malawi</h1>
-</div>
-<button class="logout-btn" id="logoutBtn">Logout</button>
+<h2>SoilSense Malawi</h2>
+<button onclick="logout()">Logout</button>
 </div>
 </div>
 
 <div class="main-container">
-<!-- Tabs -->
-<div class="tabs">
-<button class="tab-btn active" onclick="switchTab('single')">Enumeration Area</button>
-<button class="tab-btn" onclick="switchTab('bulk')">Bulk Upload</button>
-<button class="tab-btn" onclick="switchTab('history')">Decision Log</button>
-</div>
 
-<!-- Single Farmer Tab -->
-<div id="tab-single" class="tab-content active">
 <div class="two-column-layout">
-<!-- Input Column - LEFT -->
-<div class="input-column">
+
 <div class="input-card">
+
 <h2>Soil Parameters</h2>
-<p class="input-subtitle">Enter lab measurements for analysis</p>
 
-<!-- Model Select -->
-<select class="model-select" id="modelSelect">
-<option value="xgb">XGBoost (Gradient Boosting) — 96.8%</option>
-<option value="rf">Random Forest — 94.3%</option>
-</select>
-
-<!-- Primary Nutrients -->
+<!-- PRIMARY -->
 <div class="section-title">PRIMARY NUTRIENTS</div>
-<div class="input-grid">
+
+<div class="input-grid" id="primaryInputs">
+
 <div class="input-field">
-<label>pH</label>
-<input type="number" id="f_PH" value="6.2" step="0.1">
-</div>
-<div class="input-field">
-<label>Organic Carbon</label>
-<input type="number" id="f_OC" value="2.1" step="0.1">
-</div>
-<div class="input-field">
-<label>Nitrogen (N)</label>
-<input type="number" id="f_N" value="180">
-</div>
-<div class="input-field">
-<label>Phosphorus (P)</label>
-<input type="number" id="f_P" value="12.5" step="0.1">
-</div>
-<div class="input-field">
-<label>Potassium (K)</label>
-<input type="number" id="f_K" value="185">
-</div>
-<div class="input-field">
-<label>Magnesium (Mg)</label>
-<input type="number" id="f_Mg" value="2.5" step="0.1">
-</div>
+<label>Nitrogen</label>
+<input type="number">
 </div>
 
-<!-- Micronutrients -->
+<div class="input-field">
+<label>Phosphorus</label>
+<input type="number">
+</div>
+
+<div class="input-field">
+<label>Potassium</label>
+<input type="number">
+</div>
+
+</div>
+
+<button class="add-btn" onclick="addInput('primaryInputs')">+ Add Nutrient</button>
+
+
+<!-- MICRO -->
 <div class="section-title">MICRONUTRIENTS</div>
-<div class="input-grid">
+
+<div class="input-grid" id="microInputs">
+
 <div class="input-field">
-<label>Zinc (Zn)</label>
-<input type="number" id="f_Zn" value="0.8" step="0.1">
-</div>
-<div class="input-field">
-<label>Iron (Fe)</label>
-<input type="number" id="f_Fe" value="4.2" step="0.1">
-</div>
-<div class="input-field">
-<label>Copper (Cu)</label>
-<input type="number" id="f_Cu" value="0.5" step="0.1">
-</div>
-<div class="input-field">
-<label>Manganese (Mn)</label>
-<input type="number" id="f_Mn" value="3.2" step="0.1">
-</div>
+<label>Zinc</label>
+<input type="number">
 </div>
 
-<!-- Physical Properties -->
+<div class="input-field">
+<label>Iron</label>
+<input type="number">
+</div>
+
+</div>
+
+<button class="add-btn" onclick="addInput('microInputs')">+ Add Nutrient</button>
+
+
+<!-- PHYSICAL -->
 <div class="section-title">PHYSICAL PROPERTIES</div>
-<div class="input-grid">
+
+<div class="input-grid" id="physicalInputs">
+
 <div class="input-field">
 <label>Sand</label>
-<input type="number" id="f_Sand" value="62">
+<input type="number">
 </div>
+
 <div class="input-field">
 <label>Silt</label>
-<input type="number" id="f_Silt" value="8.5" step="0.1">
+<input type="number">
 </div>
+
 <div class="input-field">
 <label>Clay</label>
-<input type="number" id="f_Clay" value="9.2" step="0.1">
-</div>
-<div class="input-field">
-<label>CaCO₃</label>
-<input type="number" id="f_CaCO3" value="5.4" step="0.1">
-</div>
-<div class="input-field">
-<label>CEC</label>
-<input type="number" id="f_CEC" value="8.2" step="0.1">
-</div>
-<div class="input-field">
-<label>Moisture</label>
-<input type="number" id="f_Moisture_Content" value="19.5" step="0.1">
-</div>
+<input type="number">
 </div>
 
-<!-- Action Buttons -->
-<button class="analyze-btn" id="predictBtn">Analyze Soil</button>
-
-<div class="sample-buttons">
-<button class="sample-btn" data-sample="high">High Fertility</button>
-<button class="sample-btn" data-sample="medium">Medium Fertility</button>
-<button class="sample-btn" data-sample="low">Low Fertility</button>
-</div>
-</div>
 </div>
 
-<!-- Results Column - RIGHT -->
-<div class="results-column">
-<div class="results-card" id="resultArea">
-<div class="empty-state">
-<div class="empty-icon">🌾</div>
+<button class="add-btn" onclick="addInput('physicalInputs')">+ Add Property</button>
+
+<button class="analyze-btn">Analyze Soil</button>
+
+</div>
+
+
+<div class="results-card">
 <p>Enter soil parameters to analyze</p>
 </div>
-</div>
-</div>
-</div>
-</div>
 
-<!-- Bulk Upload Tab -->
-<div id="tab-bulk" class="tab-content">
-<div class="bulk-container">
-<div class="upload-area" id="uploadZone">
-<div class="upload-icon">📁</div>
-<p>Drop CSV file or click to browse</p>
-<span class="upload-hint">PH, OC, Mg, N, P, K, Zn, Fe, Cu, Mn, Sand, Silt, Clay, CaCO3, CEC, Moisture_Content</span>
-</div>
-<input type="file" id="fileInput" accept=".csv" style="display:none;">
-<div id="bulkResults"></div>
-</div>
-</div>
-
-<!-- History Tab -->
-<div id="tab-history" class="tab-content">
-<div class="history-card">
-<h3>Decision Log</h3>
-<div id="historyList">
-<div class="empty-state">
-<div class="empty-icon">📋</div>
-<p>No decisions recorded</p>
-</div>
-</div>
-</div>
 </div>
 
 </div>
 </div>
 
 <script>
-// ============================================
-// AUTHENTICATION SYSTEM
-// ============================================
 
-const ADMIN_CREDENTIALS = {
-    username: 'admin',
-    password: 'Admin@123'
-};
+/* LOGIN */
 
-document.addEventListener('DOMContentLoaded', function() {
-    checkAuth();
-    initEventListeners();
-    setDefaultValues();
-});
+const ADMIN={username:"admin",password:"Admin@123"}
 
-function setDefaultValues() {
-    const defaults = {
-        f_PH: 6.2, f_OC: 2.1, f_Mg: 2.5, f_N: 180, f_P: 12.5, f_K: 185,
-        f_Zn: 0.8, f_Fe: 4.2, f_Cu: 0.5, f_Mn: 3.2,
-        f_Sand: 62, f_Silt: 8.5, f_Clay: 9.2, f_CaCO3: 5.4, f_CEC: 8.2, f_Moisture_Content: 19.5
-    };
-    
-    for (const [id, value] of Object.entries(defaults)) {
-        const el = document.getElementById(id);
-        if (el) el.value = value;
-    }
+document.getElementById("loginForm").onsubmit=function(e){
+e.preventDefault()
+
+const u=document.getElementById("username").value
+const p=document.getElementById("password").value
+
+if(u===ADMIN.username && p===ADMIN.password){
+document.getElementById("loginPage").style.display="none"
+document.getElementById("mainApp").style.display="block"
+}
 }
 
-function checkAuth() {
-    const isLoggedIn = sessionStorage.getItem('soilSenseLoggedIn') === 'true';
-    const loginPage = document.getElementById('loginPage');
-    const mainApp = document.getElementById('mainApp');
-    
-    if (isLoggedIn) {
-        loginPage.style.display = 'none';
-        mainApp.style.display = 'block';
-    } else {
-        loginPage.style.display = 'flex';
-        mainApp.style.display = 'none';
-    }
+function logout(){
+document.getElementById("mainApp").style.display="none"
+document.getElementById("loginPage").style.display="flex"
 }
 
-function initEventListeners() {
-    document.getElementById('loginForm').addEventListener('submit', handleLogin);
-    document.getElementById('toggleBtn').addEventListener('click', togglePassword);
-    document.getElementById('logoutBtn').addEventListener('click', logout);
-    document.getElementById('predictBtn').addEventListener('click', runPrediction);
-    
-    document.querySelectorAll('.sample-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            loadSample(this.dataset.sample);
-        });
-    });
-    
-    const uploadZone = document.getElementById('uploadZone');
-    if (uploadZone) {
-        uploadZone.addEventListener('click', () => document.getElementById('fileInput').click());
-        uploadZone.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            uploadZone.classList.add('drag');
-        });
-        uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag'));
-        uploadZone.addEventListener('drop', handleDrop);
-    }
-    
-    document.getElementById('fileInput').addEventListener('change', handleFileUpload);
+function togglePassword(){
+const p=document.getElementById("password")
+p.type=p.type==="password"?"text":"password"
 }
 
-function togglePassword() {
-    const p = document.getElementById('password');
-    p.type = p.type === 'password' ? 'text' : 'password';
+
+/* ADD INPUT FEATURE */
+
+function addInput(containerId){
+
+const container=document.getElementById(containerId)
+
+const div=document.createElement("div")
+div.className="input-field"
+
+div.innerHTML=`
+<label>New Parameter</label>
+<input type="number" placeholder="Value">
+`
+
+container.appendChild(div)
+
 }
 
-function handleLogin(event) {
-    event.preventDefault();
-    
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const errorEl = document.getElementById('loginError');
-    
-    if (username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password) {
-        sessionStorage.setItem('soilSenseLoggedIn', 'true');
-        document.getElementById('loginPage').style.display = 'none';
-        document.getElementById('mainApp').style.display = 'block';
-        errorEl.classList.remove('show');
-        setTimeout(runPrediction, 200);
-    } else {
-        errorEl.classList.add('show');
-    }
-}
-
-function logout() {
-    sessionStorage.removeItem('soilSenseLoggedIn');
-    document.getElementById('mainApp').style.display = 'none';
-    document.getElementById('loginPage').style.display = 'flex';
-    document.getElementById('loginForm').reset();
-    document.getElementById('loginError').classList.remove('show');
-}
-
-// ============================================
-// SOIL ANALYSIS FUNCTIONS
-// ============================================
-
-const SAMPLES = {
-    high: { PH:6.5, OC:4.2, Mg:3.2, N:280, P:22, K:310, Zn:1.2, Fe:7.5, Cu:0.7, Mn:5.5, Sand:55, Silt:12, Clay:10, CaCO3:4.5, CEC:18, Moisture_Content:21 },
-    medium: { PH:6.1, OC:2.1, Mg:2.0, N:160, P:11, K:165, Zn:0.7, Fe:4.0, Cu:0.5, Mn:3.0, Sand:65, Silt:8, Clay:9, CaCO3:5.5, CEC:8, Moisture_Content:18.5 },
-    low: { PH:5.1, OC:0.6, Mg:0.8, N:45, P:4.5, K:55, Zn:0.2, Fe:2.0, Cu:0.3, Mn:1.2, Sand:80, Silt:4, Clay:5, CaCO3:2.5, CEC:3.5, Moisture_Content:13 }
-};
-
-function loadSample(type) {
-    const s = SAMPLES[type];
-    for (const [col, val] of Object.entries(s)) {
-        const id = col === 'Moisture_Content' ? 'f_Moisture_Content' : 'f_' + col;
-        const el = document.getElementById(id);
-        if (el) el.value = val;
-    }
-    setTimeout(runPrediction, 100);
-}
-
-function getRawValues() {
-    const raw = {};
-    const fields = ['PH','OC','Mg','N','P','K','Zn','Fe','Cu','Mn','Sand','Silt','Clay','CaCO3','CEC','Moisture_Content'];
-    
-    fields.forEach(col => {
-        const id = col === 'Moisture_Content' ? 'f_Moisture_Content' : 'f_' + col;
-        raw[col] = parseFloat(document.getElementById(id).value) || 0;
-    });
-    
-    return raw;
-}
-
-function calculateFertility(raw) {
-    let score = 0;
-    let maxScore = 0;
-    
-    if (raw.N >= 200) score += 20;
-    else if (raw.N >= 120) score += 15;
-    else if (raw.N >= 80) score += 10;
-    else score += 5;
-    maxScore += 20;
-    
-    if (raw.P >= 15) score += 20;
-    else if (raw.P >= 12) score += 15;
-    else if (raw.P >= 8) score += 10;
-    else score += 5;
-    maxScore += 20;
-    
-    if (raw.K >= 200) score += 20;
-    else if (raw.K >= 150) score += 15;
-    else if (raw.K >= 100) score += 10;
-    else score += 5;
-    maxScore += 20;
-    
-    if (raw.PH >= 6.0 && raw.PH <= 7.0) score += 15;
-    else if (raw.PH >= 5.5 && raw.PH <= 7.5) score += 10;
-    else score += 5;
-    maxScore += 15;
-    
-    if (raw.OC >= 2.0) score += 15;
-    else if (raw.OC >= 1.5) score += 10;
-    else score += 5;
-    maxScore += 15;
-    
-    if (raw.Moisture_Content >= 15 && raw.Moisture_Content <= 25) score += 10;
-    else score += 5;
-    maxScore += 10;
-    
-    const percentage = (score / maxScore) * 100;
-    
-    if (percentage >= 75) return 'High';
-    if (percentage >= 45) return 'Medium';
-    return 'Low';
-}
-
-function runPrediction() {
-    const raw = getRawValues();
-    const fertility = calculateFertility(raw);
-    const model = document.getElementById('modelSelect').value;
-    const confidence = model === 'xgb' ? 96.8 : 94.3;
-    
-    renderResults(fertility, raw, confidence);
-    logDecision(fertility, model);
-}
-
-function renderResults(fertility, raw, confidence) {
-    const area = document.getElementById('resultArea');
-    
-    const indicators = [
-        { name: 'NITROGEN', value: raw.N, unit: 'mg/kg', good: raw.N >= 120, optimal: 200 },
-        { name: 'POTASSIUM', value: raw.K, unit: 'mg/kg', good: raw.K >= 150, optimal: 200 },
-        { name: 'PHOSPHORUS', value: raw.P, unit: 'mg/kg', good: raw.P >= 12, optimal: 15 },
-        { name: 'ORG. CARBON', value: raw.OC.toFixed(2), unit: '%', good: raw.OC >= 2.0, optimal: 2.0 },
-        { name: 'pH', value: raw.PH.toFixed(2), unit: '', good: raw.PH >= 6.0 && raw.PH <= 7.0, optimal: 6.5 },
-        { name: 'CEC', value: raw.CEC, unit: 'cmol/kg', good: raw.CEC >= 7, optimal: 7 },
-        { name: 'MOISTURE', value: raw.Moisture_Content, unit: '%', good: raw.Moisture_Content >= 15 && raw.Moisture_Content <= 25, optimal: 20 }
-    ];
-    
-    const indicatorsHTML = indicators.map(ind => {
-        let percentage = 50;
-        if (ind.optimal) {
-            percentage = Math.min(100, (parseFloat(ind.value) / ind.optimal) * 100);
-        }
-        
-        return `
-            <div class="indicator-item">
-                <span class="indicator-name">${ind.name}</span>
-                <div class="indicator-bar">
-                    <div class="indicator-fill" style="width: ${percentage}%; background: ${ind.good ? '#2e7d32' : '#c62828'}"></div>
-                </div>
-                <span class="indicator-value">${ind.value}<span class="indicator-unit">${ind.unit}</span></span>
-            </div>
-        `;
-    }).join('');
-    
-    let description = '';
-    if (fertility === 'High') description = 'Excellent nutrient balance. This soil supports high crop productivity without external inputs.';
-    else if (fertility === 'Medium') description = 'Adequate nutrient levels with some room for improvement. Targeted supplementation may help.';
-    else description = 'Critically deficient soil. Crop failure risk is high without fertilizer intervention.';
-    
-    area.innerHTML = `
-        <div>
-            <div class="fertility-badge badge-${fertility.toLowerCase()}">${fertility} Fertility</div>
-            <div class="confidence-display">
-                <div class="confidence-label">Model Confidence</div>
-                <div class="confidence-value">${confidence}%</div>
-            </div>
-            <p class="result-desc">${description}</p>
-            <div class="indicators-section">
-                <h3>Key Fertility Indicators (7/7)</h3>
-                ${indicatorsHTML}
-            </div>
-        </div>
-    `;
-}
-
-// Decision Log
-let history = [];
-let logCount = 0;
-
-function logDecision(fertility, model) {
-    logCount++;
-    const now = new Date();
-    const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    
-    history.unshift({ id: logCount, fertility, model: model === 'xgb' ? 'XGB' : 'RF', time: timeString });
-    if (history.length > 10) history.pop();
-    renderHistory();
-}
-
-function renderHistory() {
-    const el = document.getElementById('historyList');
-    if (!history.length) {
-        el.innerHTML = '<div class="empty-state"><div class="empty-icon">📋</div><p>No decisions recorded</p></div>';
-        return;
-    }
-    
-    el.innerHTML = history.map(h => `
-        <div class="history-item">
-            <span style="font-weight:500;">Farmer #${h.id}</span>
-            <span class="history-fert badge-${h.fertility.toLowerCase()}">${h.fertility}</span>
-            <span class="history-time">${h.time} • ${h.model}</span>
-        </div>
-    `).join('');
-}
-
-function switchTab(name) {
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('active');
-        content.style.display = 'none';
-    });
-    
-    const activeBtn = Array.from(document.querySelectorAll('.tab-btn')).find(
-        btn => btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(name)
-    );
-    if (activeBtn) activeBtn.classList.add('active');
-    
-    document.getElementById('tab-' + name).classList.add('active');
-    document.getElementById('tab-' + name).style.display = 'block';
-}
-
-function handleDrop(e) {
-    e.preventDefault();
-    document.getElementById('uploadZone').classList.remove('drag');
-    const file = e.dataTransfer.files[0];
-    if (file) alert(`File "${file.name}" selected for bulk upload`);
-}
-
-function handleFileUpload(e) {
-    const file = e.target.files[0];
-    if (file) alert(`File "${file.name}" selected for bulk upload`);
-}
 </script>
+
 </body>
 </html>
