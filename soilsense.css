@@ -1,4 +1,4 @@
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -610,47 +610,4 @@ body {
         flex-direction: column;
         gap: 12px;
     }
-}
-/* =====================================
-   ADD PARAMETER BUTTONS
-===================================== */
-
-.add-input-btn {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 18px;
-    padding: 8px 10px;
-    font-size: 12px;
-    font-weight: 600;
-    border: 1px dashed #1e3c2c;
-    border-radius: 4px;
-    background: #f9f9f9;
-    color: #1e3c2c;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    transition: all 0.2s ease;
-}
-
-.add-input-btn:hover {
-    background: #1e3c2c;
-    color: #ffffff;
-    border-color: #1e3c2c;
-}
-
-/* spacing between dynamic inputs */
-.input-grid .input-field {
-    animation: fadeIn 0.25s ease;
-}
-
-/* smooth appearance when new nutrient is added */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+}"
